@@ -7,7 +7,7 @@ obligatoria para deploys chicos. POSGAR 94 es ~WGS84 a efectos prácticos.
 import math
 
 # Meridiano central por faja (grados)
-FAJAS = {2: -69.0, 3: -69.0, 4: -63.0}
+FAJAS = {2: -69.0, 3: -66.0, 4: -63.0}
 
 A = 6378137.0          # semieje mayor
 F = 1 / 298.257223563  # achatamiento

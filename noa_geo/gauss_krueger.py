@@ -59,7 +59,8 @@ def latlon_a_gk(lat, lon, faja=3):
             + lam**6 * cosp**6 / 720 * (61 - 58 * t * t + t**4)
         )
     )
-    return este, norte
+    # redondeo half-up a 4 decimales (mm de sobra para nosotros)
+    return round(este, 4), round(norte, 4)
 
 
 def gk_a_latlon(este, norte, faja=3):

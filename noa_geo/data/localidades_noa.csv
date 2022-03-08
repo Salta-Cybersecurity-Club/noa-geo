@@ -1,4 +1,5 @@
 # Compilado a mano desde IGN + censos nacionales. Uso interno.
+# OJO: las fajas de Puna/Jujuy oeste pueden estar desfasadas, ver issue #7.
 # nombre,provincia,lat,lon,faja_gk
 Salta,Salta,-24.7829,-65.4232,3
 San Salvador de Jujuy,Jujuy,-24.1858,-65.2995,3
@@ -20,3 +21,21 @@ San Antonio de los Cobres,Salta,-24.2174,-66.3187,3
 Tolar Grande,Salta,-24.5881,-67.3916,2
 Olacapato,Salta,-24.1167,-66.7167,2
 Salar de Pocitos,Salta,-24.4620,-66.9960,2
+Metán,Salta,-25.4967,-64.9738,3
+Joaquín V. González,Salta,-25.1145,-64.1269,3
+Rosario de la Frontera,Salta,-25.7985,-64.9666,3
+Orán,Salta,-23.1371,-64.3186,3
+Tartagal,Salta,-22.5164,-63.8013,3
+Embarcación,Salta,-23.2094,-64.0968,3
+Pichanal,Salta,-23.3218,-64.2241,3
+Tilcara,Jujuy,-23.5775,-65.3509,3
+Humahuaca,Jujuy,-23.2054,-65.3505,3
+La Quiaca,Jujuy,-22.1024,-65.5968,3
+Purmamarca,Jujuy,-23.7438,-65.4972,3
+Maimará,Jujuy,-23.6180,-65.4070,3
+Abra Pampa,Jujuy,-22.7231,-65.6968,3
+Susques,Jujuy,-23.3997,-66.3678,3
+San Pedro de Jujuy,Jujuy,-24.2318,-64.8680,3
+Libertador Gral. San Martín,Jujuy,-23.8069,-64.7876,3
+Fraile Pintado,Jujuy,-23.9416,-64.8002,3
+San Antonio,Jujuy,-24.3669,-65.3285,3

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1 — 2022-08-16
+- Metadata interna agregada al paquete.
+- Fix menor de redondeo en falsos este/norte.
+
 ## 0.3.0 — 2022-05-20
 - CLI `noa-geo` (convert / localidad).
 - 19 localidades nuevas (Orán, Tartagal, norte jujeño, Puna).

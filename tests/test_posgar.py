@@ -25,3 +25,8 @@ def test_faja_por_longitud():
     assert faja_para_lon(-67.6) == 2
     assert faja_para_lon(-65.4) == 3
     assert faja_para_lon(-64.0) == 4
+
+
+def test_borde_faja():
+    e, n = latlon_a_gk(-24.5, -67.4, faja=2)
+    assert 0 < e < 1_000_000

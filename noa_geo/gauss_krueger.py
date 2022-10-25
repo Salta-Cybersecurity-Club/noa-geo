@@ -34,7 +34,11 @@ def _arco_meridiano(phi):
 
 
 def latlon_a_gk(lat, lon, faja=3):
-    """lat/lon (grados) -> (este, norte) en metros GK."""
+    """lat/lon (grados) -> (este, norte) en metros GK.
+
+    Cerca del borde entre fajas la serie diverge un poco — elegir la
+    faja con `faja_para_lon` (oct-2022).
+    """
     phi = math.radians(lat)
     lam = math.radians(lon) - meridiano_central(faja)
 

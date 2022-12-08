@@ -51,6 +51,6 @@ def latlon_a_utm(lat, lon, zona=None):
             + lam**6 * cosp**6 / 720 * (61 - 58 * t * t + t**4)
         )
     )
-    if lat < 0:  # hemisferio sur — fix #5
+    if lat <= 0:  # lat 0 también toca falso norte  # hemisferio sur — fix #5
         norte += FALSO_NORTE_SUR
     return este, norte, zona

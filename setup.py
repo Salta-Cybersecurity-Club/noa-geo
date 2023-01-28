@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="noa-geo",
-    version="0.3.1",
+    version="0.4.0",
     description="Utilidades geo para el NOA: POSGAR94/Gauss-Krüger, UTM, localidades",
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",

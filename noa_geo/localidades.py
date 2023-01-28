@@ -5,6 +5,8 @@ import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
+from .gauss_krueger import faja_para_lon
+
 DATA = Path(__file__).parent / "data" / "localidades_noa.csv"
 
 
@@ -15,6 +17,10 @@ class Localidad:
     lat: float
     lon: float
     faja: int
+
+    def faja_sugerida(self):
+        """Faja GK según su longitud (por si el CSV está desactualizado)."""
+        return faja_para_lon(self.lon)
 
 
 def _norm(s):
@@ -41,3 +47,19 @@ def buscar(nombre, localidades=None):
     locs = localidades if localidades is not None else cargar()
     q = _norm(nombre)
     return [l for l in locs if q in _norm(l.nombre)]
+
+
+def cercanas(lat, lon, radio_km=50.0, localidades=None):
+    """Localidades dentro de un radio (distancia equirectangular aprox)."""
+    import math
+
+    locs = localidades if localidades is not None else cargar()
+    lat1, lon1 = math.radians(lat), math.radians(lon)
+    out = []
+    for l in locs:
+        lat2, lon2 = math.radians(l.lat), math.radians(l.lon)
+        x = (lon2 - lon1) * math.cos((lat1 + lat2) / 2)
+        y = lat2 - lat1
+        if math.sqrt(x * x + y * y) * 6371.0 <= radio_km:
+            out.append(l)
+    return out

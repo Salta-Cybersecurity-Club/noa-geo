@@ -2,6 +2,7 @@
 
 import pytest
 
+# sin pyproj estos tests se skipean en vez de romper
 pyproj = pytest.importorskip("pyproj")
 
 from noa_geo.gauss_krueger import latlon_a_gk
